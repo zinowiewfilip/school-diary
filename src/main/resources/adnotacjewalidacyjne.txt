@@ -1,0 +1,14 @@
+
+Adnotacje JSR 380:
+•	@NotNull – sprawdza czy property nie jest nullem;
+•	@AssertTrue – sprawdza czy property typu boolean ma wartość true;
+•	@Size(min = 1, max = 10) – sprawdza czy String, kolekcja, mapa lub tablica ma rozmiar pomiędzy min i max;
+•	@Min(value = 1) – sprawdza czy property (typu numerycznego) ma wartość nie mniejszą niż przekazana wartość;
+•	@Max(value = 10) - sprawdza czy property (typu numerycznego) ma wartość nie większą niż przekazana wartość;
+•	@Email – sprawdza czy przekazany String jest poprawnym adresem email;
+•	@NotEmpty – sprawdza czy String, kolekcja, mapa lub tablica nie jest pusta;
+•	@NotBlank – sprawdza czy String nie jest pustym Stringiem lub nullem.
+•	@Positive / @PositiveOrZero -  sprawdza czy wartość typu numerycznego jest dodatnia / dodatnia włączając 0;
+•	@Negative / @NegativeOrZero  -  sprawdza czy wartość typu numerycznego jest ujemna / ujemna włączając 0;
+•	@Past / @PastOrPresent – sprawdza czy data jest przeszła / przeszła włączając teraźniejszą datę;
+•	@Future / @FutureOrPresent - sprawdza czy data jest przyszła / przyszła włączając teraźniejszą datę;
