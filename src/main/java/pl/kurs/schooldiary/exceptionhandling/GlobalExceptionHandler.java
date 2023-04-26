@@ -9,6 +9,7 @@ import pl.kurs.schooldiary.exceptions.InvalidEntityException;
 import pl.kurs.schooldiary.exceptions.InvalidIdException;
 
 import javax.persistence.EntityNotFoundException;
+import java.nio.file.NoSuchFileException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -53,6 +54,17 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ExceptionResponseDto> handleSQLIntegrityConstraintViolationException(SQLIntegrityConstraintViolationException e) {
         ExceptionResponseDto response = new ExceptionResponseDto(
                 List.of(e.getMessage()),
+                "BAD_REQUEST",
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+    }
+
+    @ExceptionHandler(NoSuchFileException.class)
+    public ResponseEntity<ExceptionResponseDto> handleNoSuchFileException(NoSuchFileException e) {
+
+        ExceptionResponseDto response = new ExceptionResponseDto(
+                List.of("Not found: " +e.getFile()),
                 "BAD_REQUEST",
                 LocalDateTime.now()
         );

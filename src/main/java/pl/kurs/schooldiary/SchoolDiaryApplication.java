@@ -2,6 +2,7 @@ package pl.kurs.schooldiary;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import pl.kurs.schooldiary.services.PathBuilderService;
 
 @SpringBootApplication
 public class SchoolDiaryApplication {
@@ -9,6 +10,8 @@ public class SchoolDiaryApplication {
     public static void main(String[] args) {
         SpringApplication.run(SchoolDiaryApplication.class, args);
     }
+
+
 
 
 //    https://www.baeldung.com/integration-testing-a-rest-api

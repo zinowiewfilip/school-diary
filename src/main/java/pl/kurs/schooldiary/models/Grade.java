@@ -39,7 +39,6 @@ public class Grade implements Serializable, Identificationable {
     @ManyToOne
     @JoinColumn(name = "teacher_id", nullable = false)
     private Teacher teacher;
-
     public Grade() {
     }
 
